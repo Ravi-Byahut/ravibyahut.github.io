@@ -350,13 +350,129 @@ footer {
 }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
-@media(max-width: 768px) {
-  nav { padding: 16px 24px; }
-  .nav-links { gap: 20px; }
-  #hero, .section-wrap, #contact { padding-left: 24px; padding-right: 24px; }
-  .hero-stats { position: static; flex-direction: row; gap: 32px; margin-top: 48px; }
-  .stat { text-align: left; }
-  footer { flex-direction: column; gap: 8px; text-align: center; }
+@media (max-width: 768px) {
+
+  /* NAV */
+  nav { 
+    padding: 16px 20px; 
+  }
+
+  .nav-links { 
+    gap: 12px; 
+    flex-wrap: wrap;
+  }
+
+  .nav-links a { 
+    font-size: 10px; 
+    letter-spacing: 1px; 
+  }
+
+  /* GLOBAL PADDING */
+  #hero, .section-wrap, #contact { 
+    padding-left: 20px; 
+    padding-right: 20px; 
+  }
+
+  /* HERO LAYOUT */
+  #hero { 
+    padding-top: 180px; 
+    padding-bottom: 60px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+  }
+
+  .hero-eyebrow { 
+    justify-content: center; 
+  }
+
+  .hero-name { 
+    font-size: clamp(38px, 10vw, 60px); 
+    letter-spacing: -1.5px; 
+  }
+
+  .hero-title{
+    font-size: 14px;
+  }
+
+  .hero-desc { 
+    margin: 0 auto 32px; 
+    max-width: 100%;
+  }
+
+  .hero-cta { 
+    justify-content: center; 
+  }
+
+  /* PHOTO FIX (prevents overlap) */
+  .hero-photo-wrap {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 28px;
+    order: -1;
+  }
+
+  .hero-photo {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* STATS */
+  .hero-stats { 
+    position: static; 
+    flex-direction: row; 
+    gap: 20px; 
+    margin-top: 28px; 
+    justify-content: center; 
+    flex-wrap: wrap;
+  }
+
+  .stat { 
+    text-align: center; 
+  }
+
+  .stat-num{
+    font-size: 32px;
+  }
+
+  /* REMOVE HEAVY BACKGROUND EFFECTS ON MOBILE */
+  .orb1, .orb2 { 
+    display: none; 
+  }
+
+  /* GRIDS */
+  .skills-grid { 
+    grid-template-columns: 1fr; 
+  }
+
+  .projects-grid { 
+    grid-template-columns: 1fr; 
+  }
+
+  .certs-grid { 
+    grid-template-columns: 1fr; 
+  }
+
+  /* CONTACT */
+  .contact-links { 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 12px;
+  }
+
+  /* FOOTER */
+  footer { 
+    flex-direction: column; 
+    gap: 8px; 
+    text-align: center; 
+    padding: 24px 20px; 
+  }
+
 }
 </style>
 </head>
